@@ -60,10 +60,13 @@ function getInfo() {
 	    
 	    // Peers
 	    var html = '';
+	    var peers = 0;
 	    $.each(res.Peers, function(key, val) {
 		html += val.IPv6 + '<br/>';
+		peers++;
 	    });
 	    $('.peers').html(html);
+	    $('#peers').html('Peers ('+peers+')');
 	}
     });
 
